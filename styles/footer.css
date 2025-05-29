@@ -3,8 +3,39 @@ footer {
     padding-block: 24px;
     gap: 24px;
     font: 14px/150% var(--font-family);
+
+    & .mobile-only {
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 footer span:nth-child(1) {
     margin-right: auto;
 }
+
+
+@media (width <= 48rem) {
+
+footer.container {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    & > span {
+  margin: auto;
+}
+    }
+  
+ & .mobile-only {
+        display: flex;
+        gap: 1rem;
+       
+        
+    }
+
+}
+
+

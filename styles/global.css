@@ -1,7 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
 }
 
 :root {
@@ -36,14 +42,28 @@ a:hover {
 }
 
 .container {
+    --max-width: 80rem;
     padding-inline: 32px;
-    max-width: 1280px;
+    max-width: var(--max-width);
     margin-inline: auto;
+    
 }
 
 .bg-surface-color {
     background-color: var(--surface-color);
 }
 
+@media (width <= 48rem) {
 
+.container {
+
+    --max-width: 30rem;
+}
+
+.desktop-only {
+    display: none;
+}
+                    
+
+}
 
